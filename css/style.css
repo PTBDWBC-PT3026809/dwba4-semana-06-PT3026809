@@ -314,12 +314,13 @@ nav:nth-of-type(2) {
     width: 100%;
     min-height: 140px;
     box-sizing: border-box;
+    justify-content: flex-start;
 }
 
 .logo-band img {
     display: block;
     width: auto;
-    max-width: 100%;
+    max-width: none;
     height: auto;
     max-height: 140px;
 }
@@ -336,6 +337,15 @@ header img {
 /* ============================================
    SEÇÃO DE CURSOS NA HOME (Lista de Cursos)
    ============================================ */
+header nav:nth-of-type(2) {
+    background-color: transparent;
+    display: block;
+    padding: 30px 20px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 header nav:nth-of-type(2) p {
     font-size: 18px;
     font-weight: bold;
@@ -345,11 +355,13 @@ header nav:nth-of-type(2) p {
 
 header nav:nth-of-type(2) ul {
     list-style: none;
-    padding-left: 0;
+    padding-left: 20px;
+    margin: 0;
+    max-width: 520px;
 }
 
 header nav:nth-of-type(2) li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 header nav:nth-of-type(2) a {
