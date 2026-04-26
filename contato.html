@@ -1,19 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/style.css">
-<title>Contato - IFSP - Pirituba</title>
-<script src="js/disabling.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - IFSP</title>
+    <link rel="icon" type="image/x-icon" href="dwba4_semana_imagens-master/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <object width="100%" height="65px" data="menu.html"></object>
+        </nav>
+        <img src="dwba4_semana_imagens-master/Logo.jpg" alt="Instituto Federal São Paulo" width="250">
+    </header>
 
-  <header id="cabecalho"> <!-- Indica o cabeçalho do nosso documento-->
-    <nav>
-      <object width="100%" height="65px" data="menu.html"></object>
-    </nav>
-  </header>
-  
+    <main>
+        <h2>Mande uma mensagem</h2>
+        <form action="#" method="post">
+            <ul>
+                <li>
+                    <label for="nome">Nome </label>
+                    <input type="text" id="nome" name="nome" required>
+                </li>
+                <li>
+                    <label for="email">E-Mail </label>
+                    <input type="email" id="email" name="email" required>
+                </li>
+                <li>
+                    <label for="telefone">Telefone </label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" pattern="\(\d{2}\) \d{5}-\d{4}" title="Digite no formato (99) 99999-9999" required> (99) 99999-9999
+                </li>
+                <li>
+                    <label for="assunto">Assunto </label>
+                    <select id="assunto" name="assunto">
+                        <option value="">-- Selecione --</option>
+                        <option value="reclamacao">Reclamação</option>
+                        <option value="sugestao">Sugestão</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="mensagem">Mensagem </label><br>
+                    <textarea id="mensagem" name="mensagem" rows="4" cols="30" required></textarea>
+                </li>
+                <li>
+                    <fieldset style="display: inline-block;">
+                        <legend>Opções de Resposta</legend>
+                        <label><input type="checkbox" name="resposta_email"> E-Mail</label>
+                        <label><input type="checkbox" name="resposta_telefone"> Telefone</label>
+                    </fieldset>
+                </li>
+                <li>
+                    <button type="submit">Enviar</button>
+                </li>
+            </ul>
+        </form>
+    </main>
+
+    <object width="100%" height="120px" data="footer.html"></object>
 </body>
 </html>

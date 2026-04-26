@@ -307,12 +307,13 @@ nav:nth-of-type(2) {
    ============================================ */
 .logo-band {
     background-color: #017f00;
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 12px 20px;
     margin: 0;
     width: 100%;
-    max-width: 520px;
+    min-height: 140px;
+    box-sizing: border-box;
 }
 
 .logo-band img {
