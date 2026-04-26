@@ -58,7 +58,7 @@ nav:nth-of-type(2) {
 /* Links do menu principal - CONTAINER DO MENU */
 #my_menu {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     background-color: #323230;
@@ -70,6 +70,21 @@ nav:nth-of-type(2) {
     right: auto;
     z-index: 1000;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Lado esquerdo do menu */
+#menu_left {
+    display: flex;
+    gap: 0;
+    align-items: center;
+    height: 65px;
+}
+
+/* Lado direito do menu */
+#menu_right {
+    display: flex;
+    align-items: center;
+    height: 65px;
 }
 
 /* Links do menu - estilos gerais */
@@ -112,9 +127,9 @@ nav:nth-of-type(2) {
 
 /* Primeiro link (HOME) - sem margem extra */
 #my_menu a:first-child {
-    margin-right: auto;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-    padding-right: 30px;
+    margin-right: 0;
+    border-right: none;
+    padding-right: 20px;
 }
 
 /* Remove separadores de pontos */
@@ -227,10 +242,22 @@ nav:nth-of-type(2) {
    LOGO E IMAGENS
    ============================================ */
 header img {
-    max-width: 100%;
+    max-width: auto;
+    width: auto;
     height: auto;
     display: block;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+/* Faixa verde abaixo da logo */
+header#cabecalho::after {
+    content: '';
+    display: block;
     width: 100%;
+    height: 100px;
+    background-color: #017f00;
+    margin-top: -4px;
 }
 
 /* ============================================
