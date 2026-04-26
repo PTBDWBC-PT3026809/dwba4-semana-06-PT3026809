@@ -75,7 +75,7 @@ nav:nth-of-type(2) {
 /* Lado esquerdo do menu */
 #menu_left {
     display: flex;
-    gap: 0;
+    gap: 18px;
     align-items: center;
     height: 65px;
 }
@@ -91,13 +91,14 @@ nav:nth-of-type(2) {
 #my_menu a {
     color: #ffffff;
     text-decoration: none;
-    padding: 22px 20px;
+    text-transform: uppercase;
+    padding: 22px 22px;
     display: inline-flex;
     align-items: center;
-    transition: all 0.35s ease;
+    transition: all 0.25s ease;
     font-weight: 600;
     font-size: 14px;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
     position: relative;
     height: 65px;
     border-bottom: 3px solid transparent;
@@ -148,22 +149,85 @@ nav:nth-of-type(2) {
     display: inline-flex;
     align-items: center;
     height: 65px;
+    z-index: 1002;
 }
 
 /* Botão dropdown - VERMELHO DESTAQUE */
 .dropdown > a {
     background-color: #e74c3c;
-    padding: 22px 28px;
+    padding: 20px 24px;
+    min-width: 130px;
     height: 65px;
     display: flex;
     align-items: center;
+    justify-content: center;
     font-weight: 700;
     letter-spacing: 0.8px;
     border-bottom: 3px solid transparent;
-    transition: all 0.35s ease;
+    transition: all 0.25s ease;
+    border-radius: 0;
 }
 
 .dropdown > a:hover {
+    background-color: #c0392b;
+    border-bottom-color: #ffffff;
+}
+
+.dropdown > a::before {
+    content: '▼';
+    font-size: 11px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover > a::before {
+    transform: rotate(180deg);
+}
+
+/* Conteúdo do dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 260px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    padding: 10px 0;
+    z-index: 1001;
+    top: 65px;
+    left: 0;
+    border-radius: 0 0 6px 6px;
+    border-top: 4px solid #e74c3c;
+    animation: slideDown 0.3s ease;
+}
+
+.dropdown-content a {
+    color: #323230;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.25s ease;
+    background-color: #ffffff;
+    border-left: 4px solid transparent;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background-color: #f8f8f8;
+    border-left-color: #e74c3c;
+    color: #e74c3c;
+    padding-left: 24px;
+}
+
+.dropdown-content a:first-child {
+    border-top: 1px solid #ecf0f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
     background-color: #c0392b;
     border-bottom-color: #ffffff;
 }
